@@ -1,0 +1,135 @@
+/* stile_esercizio2.css */
+html, body{
+     font: normal 16px/24px Roboto, Helvetica, sans-serif;
+}
+
+.content-wrapper{
+    max-width: 1200px;
+}
+
+.logo{
+    width: 100%;
+    min-width: 140px;
+    max-width: 170px;
+}
+
+ /* Lista di navigazione */
+.nav-list {
+    list-style: none;
+    padding-left: 0;
+
+    display: flex;
+    justify-content: center;
+    /* justify-content: flex-start; */
+    align-items: center;
+}
+
+/* Items della navigazione */
+.nav-item {
+    margin: 0;
+    padding: 0;
+}
+
+/* Links */
+.nav-link {
+    color: rgba(0, 0, 0, 0.8);
+    border-bottom: solid 4px transparent;
+    text-decoration: none;
+    font-size: 18px;
+    margin: 8px;
+    padding: 8px;
+    white-space: nowrap;
+}
+
+.nav-link:hover {
+    color: #f04b54;
+    border-bottom: solid 4px #f04b54;
+}
+
+.nav-link.selected {
+    color: #aa8e62;
+    border-bottom: solid 4px #aa8e62;
+    cursor: default;
+}
+
+/* navigazione mobile */
+
+
+/* Bottone di ricerca */
+.btn-cerca{
+    background: transparent url('../img/search.svg') no-repeat center center;
+    border: none;
+    padding: 0;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    font-size: 0; /* Nasconde il testo del bottone */
+    margin: 3px 10px 0 0;
+}
+
+/* Bottone menu */
+.btn-menu{
+    background: transparent url('../img/menu.svg') no-repeat center center;
+    border: none;
+    padding: 0;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    font-size: 0; /* Nasconde il testo del bottone */
+    margin: 0 10px !important;
+}
+
+/* testo in colonne */
+.testo-colonne {
+    column-count: 3;
+    column-gap: 40px;
+    /* column-rule: solid 1px #ccc; */
+}
+
+/* stili testo */
+.color-gray {
+    color: rgb(180, 180, 180);
+}
+
+.font-normal {
+    font-weight: normal;
+}
+
+.font-1{
+    font-size: 16px;
+    line-height: 20px;
+}
+
+.font-2{
+    font-size: 22px;
+    line-height: 30px;
+}
+
+.font-3{
+    font-size: 32px;
+    line-height: 40px;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .logo{
+        max-width: 150px;
+    }
+    .testo-colonne {
+        column-count: 2;
+    }
+    .font-3{
+        font-size: 28px;
+        line-height: 36px;
+    }
+    .font-2{
+        font-size: 20px;
+        line-height: 28px;
+    }
+}
+
+@media (max-width: 500px) {
+    .testo-colonne {
+        column-count: 1;
+    }
+}

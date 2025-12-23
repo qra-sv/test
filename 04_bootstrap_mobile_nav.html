@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Testo in colonne</title>
+  <link rel="stylesheet" href="css/bootstrap-grid.css">
+  <link rel="stylesheet" href="css/stile_esercizio4.css">
+</head>
+<body>
+  <div class="container-fluid">
+        <div class="row pt-4 pb-5 mb-5 align-items-center">
+            <div class="col-6 col-lg-2">
+              <a href="#"><img class="logo" src="img/logo-horizontal-black.svg" alt="Logo Uffizi"></a>
+            </div>
+            <div class="col-lg-9 nav-wrapper d-none d-lg-block">
+                <ul class="nav-list">
+                      <li class="nav-item">
+                          <a href="#" class="nav-link selected">Gli <strong>Uffizi</strong></a>
+                      </li>
+                      <li class="nav-item">
+                          <a href="#" class="nav-link">Palazzo <strong>Pitti</strong></a>
+                      </li>
+                      <li class="nav-item">
+                          <a href="#" class="nav-link">Giardino di <strong>Boboli</strong></a>
+                      </li>
+                      <li class="nav-item">
+                          <a href="#" class="nav-link">Corridoio <strong>Vasariano</strong></a>
+                      </li>
+                </ul>
+            </div>
+            <div class="col-6 col-lg-1 d-flex justify-content-end align-items-center">
+              <button class="btn btn-cerca">Cerca</button>
+              <!-- <button class="btn btn-menu d-block d-lg-none">Menu</button> -->
+            </div>
+        </div>
+
+        <div class="col-12 mobile-nav-wrapper d-lg-none">
+                <button class="btn btn-close mb-3">Close</button>
+                <ul class="nav-list">
+                      <li class="nav-item">
+                          <a href="#" class="nav-link">Home</a>
+                      </li>
+                      <li class="nav-item">
+                          <a href="#" class="nav-link selected">Gli <strong>Uffizi</strong></a>
+                      </li>
+                      <li class="nav-item">
+                          <a href="#" class="nav-link">Palazzo <strong>Pitti</strong></a>
+                      </li>
+                      <li class="nav-item">
+                          <a href="#" class="nav-link">Giardino di <strong>Boboli</strong></a>
+                      </li>
+                      <li class="nav-item">
+                          <a href="#" class="nav-link">Corridoio <strong>Vasariano</strong></a>
+                      </li>
+                </ul>
+        </div>
+    </div>
+
+    <div class="container-fluid content-wrapper">
+          
+          <div class="row prima-row mb-5">
+                <div class="col-12 col-sm-6 mb-3 mb-md-0">
+                    <h1 class="font-3">Bootstrap + media query + menu </h1>
+                </div>
+                <div class="col-12 col-sm-5">
+                    <h2 class="font-2 color-gray font-normal">In questo esercizio vedremo come gestire un layout con la Bootstrap Grid, insieme alle media query </h2>
+                </div>
+          </div>
+            
+          <div class="row mb-5 pt-3">
+              <div class="col-12 testo-colonne">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tempor sit amet dolor eu sodales. Aenean faucibus dolor id turpis congue posuere. Duis at ex bibendum, cursus mi non, lobortis lacus. Mauris nec velit in nibh aliquam semper. Nulla ut vestibulum dui. Maecenas ipsum magna, placerat eget congue sed, mattis et neque. Nunc tincidunt elit sit amet aliquam auctor. Nullam nec diam vel dolor pulvinar faucibus ac sit amet elit. Maecenas placerat, odio a bibendum luctus, diam nisl laoreet felis, ut mollis velit orci vel arcu. Suspendisse posuere id tortor in finibus. Pellentesque velit est, posuere eget fermentum ac, dignissim a nibh. Nunc ac sagittis urna. Cras facilisis vel metus eget interdum. Phasellus elementum, nisl id bibendum semper, justo lorem feugiat enim, a consectetur est lectus quis diam. Suspendisse laoreet tincidunt sem, vel rutrum purus volutpat nec.
+              </div>
+          </div>
+    </div>
+<script>
+// Mostra il menu mobile con animazione quando si clicca sul bottone "Menu"
+document.querySelector('.btn-menu').addEventListener('click', function() {
+  document.querySelector('.mobile-nav-wrapper').classList.add('show');
+});
+
+// Nasconde il menu mobile con animazione quando si clicca sul bottone "Close"
+document.querySelector('.btn-close').addEventListener('click', function() {
+  document.querySelector('.mobile-nav-wrapper').classList.remove('show');
+});
+
+// Nasconde il menu mobile con animazione quando si clicca in un punto qualsiasi di mobile-nav-wrapper (tranne sui link)
+document.querySelector('.mobile-nav-wrapper').addEventListener('click', function(e) {
+  if (e.target.tagName.toLowerCase() !== 'a') {
+    document.querySelector('.mobile-nav-wrapper').classList.remove('show');
+  }
+});
+</script>
+</body>
+</html>
